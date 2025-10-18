@@ -34,6 +34,7 @@ dist-ssr
 # testing
 /coverage
 
+
 # production
 /build
 
@@ -50,3 +51,6 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Testing plan
+TESTING_PLAN.md

@@ -47,7 +47,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
   }, [userMenuOpen]);
 
   const themeIcon = isDarkMode ? <RiMoonClearLine className="h-4 w-4" /> : <RiSunLine className="h-4 w-4" />;
-  const themeLabel = isDarkMode ? "Switch to Light mode" : "Switch to Dark mode";
+  const themeLabel = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
 
   const handleLogout = () => {
     logout();

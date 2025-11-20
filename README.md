@@ -18,11 +18,11 @@ This project was developed as part of the **Northcoders Full-Stack Software Deve
 
 ## Tech Stack
 
-- **React** - UI library for building user interfaces
-- **Vite** - Build tool and development server
-- **Tailwind CSS** - Utility-first CSS framework
-- **Axios** - HTTP client for API requests
-- **Vitest** - Unit testing framework
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **Axios**
+- **Vitest**
 
 ## Backend Repository
 

@@ -1,50 +1,66 @@
-# NC Games Frontend
+# No Dice Games - Frontend
 
-NC Games is a board game review aggregation app allowing users to view, vote and comment on reviews amongst other features.
+No Dice Games is a board game review aggregation app allowing users to view, vote and comment on reviews amongst other features.
 
-You can find the hosted version of this project here:
-https://nc-games1334.netlify.app/
+**[View the live application here](https://nodicegames.netlify.app/)**
 
-You can find the backend repo here:
-https://github.com/Oliver1334/nc-games-beproject
+This project was developed as part of the **Northcoders Full-Stack Software Developer Bootcamp**.
 
 ## Features
 
-* Homepage carousel of featured reviews
-* View all articles
-* View a specific article
-* Filter, sort and/or order articles via queries
-* Sign in as a user to post comments on articles and delete those authored by current user
-* Upvote or downvote an article
+- Homepage carousel of featured reviews
+- View all articles with filtering and sorting capabilities
+- View detailed article pages with voting functionality
+- Filter, sort and order articles via query parameters
+- User authentication to post and manage comments
+- Upvote or downvote articles
+- Delete comments authored by the current user
 
+## Tech Stack
 
+- **React** - UI library for building user interfaces
+- **Vite** - Build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Axios** - HTTP client for API requests
+- **Vitest** - Unit testing framework
 
-## Running this project locally
+## Backend Repository
 
-*Note: The minimum version of Node.js required to run this is `V19.1.0`*
+The corresponding backend API can be found here: [No Dice Games Backend](https://github.com/Oliver1334/nodicegames-BE.git)
+
+## Installation & Setup
+
+### Prerequisites
+
+- Node.js (minimum version 19.1.0)
+
+### Steps
 
 1. Clone this repository:
-   ```
-   git clone https://github.com/Oliver1334/nc-games-feproject
-   ```
+```bash
+git clone https://github.com/Oliver1334/nodicegames-FE.git
+```
 
-2. Change into this repos directory:
-   ```
-   cd nc-games-feproject
-   ```
+2. Navigate to the project directory:
+```bash
+cd nodicegames-FE
+```
 
-3. Install dependencies
-   ```
-   npm install
-   ```
+3. Install dependencies:
+```bash
+npm install
+```
 
-4. Run a local instance of NC Games
-   ```
-   npm start
-   ```
-   
-5. Your default web browser should now automatically open NC Games, if not direct your browser to http://localhost:3000 
+4. Start the development server:
+```bash
+npm run dev
+```
 
+5. The application will automatically open in your default browser. If not, navigate to http://localhost:3000
 
+## Available Scripts
 
-
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check code quality

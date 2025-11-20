@@ -58,9 +58,3 @@ npm run dev
 
 5. The application will automatically open in your default browser. If not, navigate to http://localhost:3000
 
-## Available Scripts
-
-- `npm run dev` - Start the development server
-- `npm run build` - Build the application for production
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint to check code quality

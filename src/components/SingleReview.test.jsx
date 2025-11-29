@@ -63,4 +63,36 @@ describe("SingleReview Component", () => {
       "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?w=700&h=700"
     );
   });
+
+  it("Should show a loading state on initial visit", () => {
+    useParams.mockReturnValue({ review_id: "1" });
+    signInHandler.mockResolvedValue([
+        { username: "grumpy19", avatar_url: "https://example.com/avatar.jpg" },
+        {
+          username: "happypancake",
+          avatar_url: "https://example.com/avatar2.jpg",
+        },
+      ]);
+      getReviewById.mockReturnValue(new Promise(() => {})); // Never resolves so loading is displayed
+
+      render(
+        <UserContext.Provider
+          value={{ user: { username: "" }, isLoggedIn: false }}
+        >
+          <SingleReview />
+        </UserContext.Provider>
+      );
+  
+      expect(screen.getByRole("paragraph")).toHaveTextContent(/fetching review.../i);
+
+
+
+  })
+
+
+
+
+
+
+
 });

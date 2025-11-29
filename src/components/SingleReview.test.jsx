@@ -8,6 +8,7 @@ import { signInHandler } from "../api";
 import { getReviewById } from "../api";
 import { useParams } from "react-router-dom";
 import { getCommentsById } from "../api";
+import { voteForReview } from "../api";
 vi.mock("react-router-dom", async () => {
   const actual = await vi.importActual("react-router-dom");
   return {
@@ -130,6 +131,65 @@ describe("SingleReview Component", () => {
     expect(await screen.findByText(/I agree/i)).toBeInTheDocument();
 
   })
+
+  it("Vote button exists on the review, clicking updates the vote count", async () => {
+    const user = userEvent.setup();
+    voteForReview.mockResolvedValue({review_id: "1"})
+    useParams.mockReturnValue({review_id: "1"})
+    getReviewById.mockResolvedValue({
+      title: "Culture a Love of Agriculture With Agricola",
+      designer: "Uwe Rosenberg",
+      owner: "tickle122",
+      review_img_url:
+        "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?w=700&h=700",
+      review_body:
+        "You could sum up Agricola with the simple phrase 'Farmyard Fun' but the mechanics and game play add so much more than that. You'll find yourself torn between breeding pigs, or sowing crops. Its joyeous and rewarding and it makes you think of time spent outside, which is much harder to do these days!",
+      category: "strategy",
+      created_at: new Date(1610964020514),
+      votes: 1,
+    });
+    getCommentsById.mockResolvedValue({
+          comments: [
+            { comment_id: 1, author: "grumpy19", body: "Great game!", votes: 5 },
+            { comment_id: 2, author: "happypancake", body: "I agree!", votes: 3 },
+          ],
+        });
+
+    signInHandler.mockResolvedValue([
+      { username: "grumpy19", avatar_url: "https://example.com/avatar.jpg" },
+      {
+        username: "happypancake",
+        avatar_url: "https://example.com/avatar2.jpg",
+      },
+    ]);
+
+    render(
+      <UserContext.Provider
+        value={{ user: { username: "" }, isLoggedIn: false }}
+      >
+        <SingleReview />
+      </UserContext.Provider>
+    );
+
+    const voteButton = await screen.findByRole("button", {
+        name: /vote/i,
+      });
+ 
+
+    expect(await screen.findByText(/votes: 1/i)).toBeInTheDocument();
+    await user.click(voteButton);
+    expect(await screen.findByText(/votes: 2/i)).toBeInTheDocument();
+    expect(voteForReview).toHaveBeenCalledWith("1");
+    
+
+  })
+
+
+
+
+
+
+
 
 
 

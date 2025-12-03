@@ -21,6 +21,7 @@ const LandingPage = () => {
       href: "/reviews/10",
       image: "https://images.pexels.com/photos/4691579/pexels-photo-4691579.jpeg?w=1200&h=800&auto=compress&cs=tinysrgb",
       tag: "Review",
+      owner: "jessjelly",
     },
     {
       id: 8,
@@ -28,6 +29,7 @@ const LandingPage = () => {
       href: "/reviews/8",
       image: "https://images.pexels.com/photos/4200740/pexels-photo-4200740.jpeg?w=1200&h=800&auto=compress&cs=tinysrgb",
       tag: "Feature",
+      owner: "grumpy19",
     },
     {
       id: 23,
@@ -35,6 +37,7 @@ const LandingPage = () => {
       href: "/reviews/23",
       image: "https://images.pexels.com/photos/5439508/pexels-photo-5439508.jpeg?w=1200&h=800&auto=compress&cs=tinysrgb",
       tag: "Review",
+      owner: "jessjelly",
     },
     {
       id: 6,
@@ -42,6 +45,7 @@ const LandingPage = () => {
       href: "/reviews/6",
       image: "https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?w=1200&h=800&auto=compress&cs=tinysrgb",
       tag: "Opinion",
+      owner: "cooljmessy",
     },
     {
       id: 9,
@@ -49,6 +53,7 @@ const LandingPage = () => {
       href: "/reviews/9",
       image: "https://images.pexels.com/photos/1153929/pexels-photo-1153929.jpeg?w=700&h=700",
       tag: "Opinion",
+      owner: "tickle122",
     },
   ];
   

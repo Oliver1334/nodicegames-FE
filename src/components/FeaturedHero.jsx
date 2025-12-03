@@ -56,7 +56,7 @@ export default function FeaturedHero({ items = [] }) {
                 {primary.title}
               </h2>
               <p className="text-sm text-brandLightText dark:text-brandText mt-1">
-                by <span className="font-medium">Author Name</span> · BoardGameGeek News
+                Reviewed by: <span className="font-medium">{primary.owner}</span> · 
               </p>
             </Link>
           </div>

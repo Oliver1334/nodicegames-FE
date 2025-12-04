@@ -110,14 +110,12 @@ export default function FeaturedHero({ items = [] }) {
           />
         </div>
         <div className="mt-3">
-          <span className="text-xs uppercase text-gray-500 font-medium tracking-wide">
-            {item.tag}
-          </span>
-          <h3 className="text-lg font-semibold mt-1 leading-tight group-hover:underline">
+          
+          <h3 className="text-lg font-semibold mt-1 leading-tight group-hover:underline text-brandLightText dark:text-brandText">
             {item.title}
           </h3>
-          <p className="text-xs text-gray-500 mt-1">
-            by <span className="font-medium">Author Name</span> · BoardGameGeek News
+          <p className="text-xs text-brandLightText dark:text-brandText mt-1">
+            Reviewed by: <span className="font-medium">{item.owner}</span> · Posted on: {item.date}
           </p>
         </div>
       </Link>

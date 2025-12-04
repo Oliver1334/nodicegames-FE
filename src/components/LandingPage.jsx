@@ -72,7 +72,7 @@ const LandingPage = () => {
         }`}
       >
         <FeaturedHero items={items} />
-        <div className="h-110">
+        <div className="h-60 sm:h-100">
           {/* Extra page space div */}
         </div>
       </div>

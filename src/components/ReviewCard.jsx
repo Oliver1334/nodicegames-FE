@@ -6,12 +6,11 @@ export const ReviewCard = ({ review }) => {
   const previewShortReview = review.review_body.substring(0, 50) + "...";
 
   const createdAtDate = new Date(review.created_at);
-  const formattedDate = `${createdAtDate
-    .getDate()
-    .toString()
-    .padStart(2, "0")}-${(createdAtDate.getMonth() + 1)
-    .toString()
-    .padStart(2, "0")}-${createdAtDate.getFullYear()}`;
+  const formattedDate = createdAtDate.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  });
 
   const {
     category,

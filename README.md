@@ -1,6 +1,6 @@
 # No Dice Games - Frontend
 
-No Dice Games is a board game review aggregation app allowing users to view, vote and comment on reviews amongst other features.
+No Dice Games is a board game review aggregation app allowing users to view, vote and comment on reviews amongst other features. Features comprehensive testing including unit/integration tests (Vitest, React Testing Library) and end-to-end tests (Cypress).
 
 **[View the live application here](https://nodicegames.netlify.app/)**
 
@@ -22,7 +22,13 @@ This project was developed as part of the **Northcoders Full-Stack Software Deve
 - **Vite**
 - **Tailwind CSS**
 - **Axios**
+- **React Router**
+
+### Testing
+
 - **Vitest**
+- **React Testing Library**
+- **Cypress**
 
 ## Backend Repository
 

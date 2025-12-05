@@ -182,14 +182,14 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
                     className="fixed right-4 top-16 z-50 w-56 rounded-lg border border-black/5 bg-brandLight p-2 shadow-lg dark:border-white/10 dark:bg-brandDark"
                     role="menu"
                   >
-                    <a
-                      href="#"
+                    <Link
+                      to="/about"
                       onClick={() => setNav(false)}
                       className="block rounded-md px-3 py-2 text-sm text-brandLightText hover:bg-brandPrimary/10 dark:text-brandText dark:hover:bg-brandPrimary/20 transition-colors duration-250 "
                       role="menuitem"
                     >
                       About
-                    </a>
+                    </Link>
                     <Link
                       to="/reviews"
                       onClick={() => setNav(false)}
